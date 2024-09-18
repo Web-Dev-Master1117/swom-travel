@@ -1,0 +1,145 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* import fonts from /fonts/ and name variables 
+
+
+
+*/
+
+@font-face {
+  font-family: 'EBGaramond';
+  src: url('/fonts/EBGaramond-Italic.ttf') format('ttf'),
+    url('/fonts/EBGaramond.ttf') format('ttf');
+}
+
+@font-face {
+  font-family: 'Kanit';
+  src: url('/fonts/Kanit-Bold.ttf') format('ttf'),
+    url('/fonts/Kanit-Regular.ttf') format('ttf'),
+    url('/fonts/Kanit-Light.ttf') format('ttf');
+}
+
+@font-face {
+  font-family: 'Noto';
+  src: url('/fonts/NotoSerifJP-Bold.otf') format('otf'),
+    url('/fonts/NotoSerifJP-Regular.otf') format('otf');
+}
+
+#sanityStudio > div {
+  height: calc(100vh - 68px) !important;
+}
+
+li {
+  font-family: 'Kanit' !important;
+}
+
+textPath {
+  font-family: 'Noto' !important;
+  font-size: 8px;
+  letter-spacing: 0.2rem;
+}
+
+h1,
+label {
+  font-family: 'EBGaramond' !important;
+}
+
+h2 {
+  font-family: 'Kanit' !important;
+  font-size: 1.5rem;
+}
+
+p,
+input,
+button,
+select,
+textarea {
+  font-family: 'Noto' !important;
+}
+
+a {
+  display: flex;
+  font-family: 'Noto' !important;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+.circle-button {
+  position: relative;
+  width: 100%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  height: 200px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999999;
+}
+
+.main_circle_text {
+  position: absolute;
+  font-size: 13px;
+  animation: animete_circle_txt 10s linear infinite;
+}
+
+@keyframes animete_circle_txt {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.sender {
+  justify-content: flex-start;
+}
+
+.recipient {
+  justify-content: end;
+}
+
+.gradient-mask {
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), #f4ece7);
+  pointer-events: none; /* Ensures the gradient doesn't interfere with clicks on the image */
+}
+
+.scroll-shadows {
+  scrollbar-width: 10px; /*thin;*/
+  scrollbar-color: #17212d #ffffff;
+}
+
+.scroll-shadows::-webkit-scrollbar {
+  width: 10px;
+}
+
+.scroll-shadows::-webkit-scrollbar-track {
+  background: transparent; /* color of the tracking area */
+}
+
+.scroll-shadows::-webkit-scrollbar-thumb {
+  background-color: #17212d; /* color of the scroll thumb */
+  border-radius: 10px; /* roundness of the scroll thumb */
+  /* height of the scrollbar is   */
+}
+
+.arrow_box {
+  position: relative;
+  background-color: #7f8119;
+}
+
+.dragged {
+  box-shadow: '0px 6px 6px -3px rgba(0, 0, 0, 0.2), 0px 10px 14px 1px rgba(0, 0, 0, 0.14), 0px 4px 18px 3px rgba(0, 0, 0, 0.12)';
+  opacity: 100%;
+  border: 5px solid #7f8119;
+  border-radius: 0;
+  z-index: 9999999;
+}
+
+.drag-item {
+  display: flex;
+  cursor: grab;
+  user-select: none;
+  box-shadow: 0px 6px 6px -3px rgba(0, 0, 0, 0.2);
+}
